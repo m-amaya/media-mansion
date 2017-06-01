@@ -1,6 +1,7 @@
 
 const express = require('express')
 const exphbs = require('express-handlebars')
+const dao = require('./db/dao')
 
 let app = express()
 
@@ -16,7 +17,7 @@ app.set('view engine', '.hbs')
 
 app.get('/',
     (req, res) => {
-        res.send('Hello, world!')
+        res.send('Hello, world!\n')
     })
 
 app.get('/render',
