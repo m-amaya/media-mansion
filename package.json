@@ -1,0 +1,16 @@
+{
+  "name": "media-mansion",
+  "version": "1.0.0",
+  "description": "Personal library of movies, tv shows, books, and music.",
+  "main": "server.js",
+  "repository": "https://github.com/m-amaya/media-mansion.git",
+  "author": "Nick Amaya",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.15.3",
+    "express-handlebars": "^3.0.0",
+    "pg": "^6.2.3",
+    "sequelize": "^3.30.4",
+    "sequelize-cli": "^2.7.0"
+  }
+}
