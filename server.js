@@ -2,18 +2,15 @@
 const express = require('express')
 const exphbs = require('express-handlebars')
 
+// Create app and handlebars instance
 let app = express()
+let hbs = exphbs( { extname: '.hbs', defaultLayout: 'main' } )
 
-// Create .hbs view engine
-const hbs =
-    exphbs({
-        extname: '.hbs',
-        defaultLayout: 'main'
-    })
-
+// Configure app to use handlebars template engine to render views
 app.engine('hbs', hbs)
 app.set('view engine', '.hbs')
 
+// Routes
 app.get('/',
     (req, res) => {
         res.send('Hello, world!')
@@ -24,7 +21,8 @@ app.get('/render',
         res.render('index')
     })
 
+// Tell app to listen on port 8000
 app.listen(8000,
     () => {
-        console.log('Server running on port \'localhost\':8000')
+        console.log('Server running on localhost:8000')
     })
